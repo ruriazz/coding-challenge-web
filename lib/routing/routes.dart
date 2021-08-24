@@ -39,7 +39,7 @@ class RouteHandler {
 
   static Handler get payment {
     return new Handler(
-      handlerFunc: (BuildContext? context, Map<String, List<String>> params) => PaymentPage()
+      handlerFunc: (BuildContext? context, Map<String, List<String>> params) => PaymentPage(params: params)
     );
   }
 

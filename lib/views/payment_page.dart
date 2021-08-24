@@ -16,8 +16,13 @@ import 'package:arcainternational/widget/main_view.dart';
 import 'package:arcainternational/widget/pay_list_value.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 
 class PaymentPage extends StatefulWidget {
+  Map<String, List<String>> params;
+
+  PaymentPage({required this.params});
+
   _PaymentPageState createState() {
     return new _PaymentPageState();
   }
@@ -25,6 +30,7 @@ class PaymentPage extends StatefulWidget {
 
 class _PaymentPageState extends State<PaymentPage> {
   bool onLoad = true;
+  Payment? paymentData;
   List<User> employeeList = <User>[];
   List<User> selectedEmployee = <User>[];
   List<bool> checked = <bool>[];
@@ -57,6 +63,7 @@ class _PaymentPageState extends State<PaymentPage> {
   }
 
   void _initialPage() async {
+
     employeeList = await Application.userService.getEmployee();
     checked.clear();
     employeeList.forEach((e) {
@@ -64,6 +71,13 @@ class _PaymentPageState extends State<PaymentPage> {
     });
 
     super.setState(() {
+      percentTotal = percentTotal;
+      widgetListValue = widgetListValue;
+      selectedEmployee = selectedEmployee;
+      
+      dynamicAppTextField = dynamicAppTextField;
+      dynamicFN = dynamicFN;
+      dynamicTC = dynamicTC;
       employeeList = employeeList;
       checked = checked;
       onLoad = false;
@@ -388,7 +402,7 @@ class _PaymentPageState extends State<PaymentPage> {
     double x = 100;
     double total = 0;
     for(TextEditingController ctr in dynamicTC) {
-      int idx = dynamicTC.indexOf(ctr);
+      int idx = dynamicTC.indexOf(controller!);
 
       if(ctr.text.isNotEmpty) {
         String ctrText = ctr.text;

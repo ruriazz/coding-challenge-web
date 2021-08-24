@@ -102,20 +102,6 @@ class MainLayout extends StatelessWidget {
                       onTap: () => Application.router.navigateTo(context, '/pay'),
                     ),
                   ) : Container(),
-                  Application.isAdmin ? Container(
-                    padding: EdgeInsets.symmetric(horizontal: 5),
-                    child: InkWell(
-                      child: Text(
-                        "Buruh",
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: AppColors.fontColor,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      onTap: () => Application.router.navigateTo(context, '/employee'),
-                    ),
-                  ) : Container(),
                   Container(
                     padding: EdgeInsets.only(left: 17.5),
                     child: InkWell(

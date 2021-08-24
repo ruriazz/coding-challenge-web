@@ -19,6 +19,7 @@ class AppTextField extends StatelessWidget {
   String? prefixText;
   List<TextInputFormatter>? inputFormatter;
   String? suffixText;
+  String? initialValue;
 
   AppTextField({
     required this.controller,
@@ -36,7 +37,8 @@ class AppTextField extends StatelessWidget {
     this.onChanged,
     this.prefixText,
     this.inputFormatter,
-    this.suffixText
+    this.suffixText,
+    this.initialValue
   });
 
   Widget build(BuildContext context) {
@@ -53,6 +55,7 @@ class AppTextField extends StatelessWidget {
           keyboardType: keyboardType,
           onChanged: onChanged,
           style: TextStyle(fontSize: 13.5),
+          initialValue: initialValue,
           inputFormatters: this.inputFormatter,
           decoration: InputDecoration(
             prefixText: prefixText,
