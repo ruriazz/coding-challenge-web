@@ -19,7 +19,7 @@ dapat membuat user baru dengan sesi admin. password default untuk user adalah
 ```
 
 ##### Untuk database dapat langsung diakses melalui
-[https://phpmyadmin.warkopwarawiri.id](https://phpmyadmin.warkopwarawiri.id)
+[https://phpmyadmin.warkopwarawiri.id](https://phpmyadmin.warkopwarawiri.id/index.php?route=/&route=%2F&db=challenge)
 ```sh
 user        : testerchallenge
 password    : ArcaInternationalChallenge
