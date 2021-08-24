@@ -2,6 +2,8 @@
 
 ##### Testing
 [https://aziz.warkopwarawiri.id](https://aziz.warkopwarawiri.id)
+Saya menyarankan untuk testing menggunakan desktop.
+karena belum dibuat responsive untuk versi mobile
 
 ##### Login admin
 Untuk testing:
